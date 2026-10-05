@@ -1,2 +1,30 @@
 - name: Introduction
+- name: Overview
   href: ../index.md
+- name: Specs
+- name: VertiGate
+  href: vertigate-overview.md
+- name: Getting Started
+- name: Ports and Connections
+  href: connections.md
+- name: Installation
+  href: installation.md
+- name: Gate Control Panel
+  href: gate-control-panel.md
+- name: Bonsai
+  href: harp-bonsai.md
+- name: Bonsai Workflows
+- name: Calibrate the Gate
+  href: calibrate-gate.md
+- name: Tune Speed and Torque
+  href: tune-speed-torque.md
+- name: Move the Gate
+  href: move-gate.md
+- name: Monitor the Servo
+  href: monitor-servo.md
+- name: Data Management
+- name: Logging and Analysis
+  href: logging-analysis.md
+- name: Troubleshooting
+- name: Indicators and Errors
+  href: troubleshooting.md
