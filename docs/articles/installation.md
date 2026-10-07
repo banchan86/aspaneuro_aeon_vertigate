@@ -17,6 +17,9 @@ These steps are only required the first time you connect the device to a new com
 - (Optional) Install the `Bonsai.Windows.Input` package to follow along with the examples in this user guide.
 - (Optional) Install the `Bonsai.Gui` package to use the [Gate Control Panel](gate-control-panel.md).
 
+> [!NOTE]
+> The `Aeon.Vertigate` package has not been released yet.
+
 # [Python](#tab/python)
 
 The [Harp](https://harp-tech.org/python/) library provides a Python interface for controlling Harp devices and [loading](logging-analysis.md) recorded data. To install the full library, install it in a Python environment with:
@@ -40,11 +43,14 @@ pip install swc-aeon-vertigate
 > [!NOTE]
 > Substitute `uv add` for `pip install` if you are using the [uv](https://docs.astral.sh/uv/) package manager.
 
+> [!NOTE]
+> The `swc-aeon-vertigate` package is not released on PyPi yet, it can be found in `software/python`, but it not actually be necessary for loading data if the save folder includes a `device.yml`. Anyway keep the `swc-aeon-vertigate` section for now and revise later if necessary.
+
 ***
 
 ## Firmware
 
-New features are added and bugs are fixed with firmware updates which are published on the [release page](https://github.com/SainsburyWellcomeCentre/aeon_vertigate/releases) in the VertiGate repository. Each release attaches one firmware image named `VertiGate-fw<x.y>-harp1.13-hw<x.y>-ass0.uf2`, where `fw` is the firmware version and `hw` is the hardware version it targets. The image is a MicroPython build with the VertiGate application frozen inside, so flashing it is the whole installation.
+New features are added and bugs are fixed with firmware updates which are published on the [release page](https://github.com/SainsburyWellcomeCentre/aeon_vertigate/releases) in the VertiGate repository. Each release attaches one firmware image named `VertiGate-fw<x.y>-harp1.13-hw<x.y>-ass0.uf2`, where `fw` is the firmware version and `hw` is the hardware version it targets.
 
 > [!WARNING]
 > **TODO**: State where the hardware version is printed on the Dynamixel Controller board.
@@ -52,14 +58,10 @@ New features are added and bugs are fixed with firmware updates which are publis
 The VertiGate does not use the Harp bootloader, so the "Bootloader" button in the Bonsai device setup dialog does not apply. Flash the `.uf2` through the RP2350 USB boot drive instead:
 
 1. Hold the **BOOTSEL** button on the board and plug it in, or press reset while holding **BOOTSEL**. A drive named `RP2350` appears on the computer.
-2. If the board previously ran the firmware from loose Python files, clear its file system first, as described in [The single file firmware image](../firmware-image.md). A board straight from the factory, or one that already runs a release image, needs nothing here.
-3. Copy the `.uf2` from the release to the `RP2350` drive. The board reboots by itself.
-4. Check that **two** serial ports appear. The first is the MicroPython console and the second is the Harp interface. Use the second one in Bonsai.
+2. Copy the `.uf2` from the release to the `RP2350` drive. The board reboots by itself.
+3. Check that **two** serial ports appear. The first is the MicroPython console and the second is the Harp interface. Use the second one in Bonsai.
 
 To update, flash the new `.uf2` the same way. The stored settings survive, because the image only replaces the firmware region.
-
-> [!WARNING]
-> Do not use `flash_nuke.uf2` to erase the board. That file is an RP2040 image, and the RP2350 boot loader ignores it.
 
 After the update, the device reboots with the new firmware and homes the gate.
 

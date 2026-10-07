@@ -20,13 +20,12 @@ The VertiGate is a Harp device that moves a vertical gate with a Dynamixel XM430
 - Calibration offset range: −128 to 127 encoder counts, 25 µm per count
 - Position event rate: every 50 ms while the gate moves or homes
 - Servo telemetry event rate: 1 Hz
-- Host interface: USB CDC serial at 1 Mbaud, Harp protocol version 1.13
-- WhoAmI: 3002
+- Host interface: USB CDC serial at 1 Mbaud
 
 > [!WARNING]
-> **TODO**: Add the servo supply voltage and current, the timestamp resolution and the synchronization accuracy of the MicroPython Harp core. These are not recorded in the repository and must be measured or taken from the core documentation.
+> **TODO**: Add the servo supply voltage and current, 
 
 > [!NOTE]
-> The VertiGate is built on the MicroPython [microharp](https://github.com/SainsburyWellcomeCentre/micropython-microharp) core rather than the ATxmega core used by most Harp devices, so timing figures published for other Harp devices do not apply to it.
+> As the VertiGate is built on the MicroPython [microharp](https://github.com/SainsburyWellcomeCentre/micropython-microharp) core rather than the ATxmega core used by most Harp devices, timing figures published for other Harp devices do not apply to it. The timestamp resolution and the synchronization accuracy of the MicroPython Harp core should be benchmarked as a spec for documentation.
 
 [!INCLUDE [](version-footer.md)]

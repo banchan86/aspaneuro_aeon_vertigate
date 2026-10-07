@@ -1,6 +1,6 @@
-## Gate Control Panel
+## GUI
 
-The Gate Control Panel is a ready-made Bonsai workflow with buttons and sliders for every register of the VertiGate. Use it to exercise a new device, to trim the calibration, or to move the gate by hand during setup, without building a workflow of your own.
+The Gate Control Panel is a graphical user interface (GUI) for the VertiGate. Use it to exercise a new device, to trim the calibration, or to move the gate by hand during setup, without building a workflow of your own.
 
 Before beginning, [install the Bonsai packages](installation.md#software-packages), including `Bonsai.Gui`, follow the hardware setup [guide](connections.md), and connect the USB cable to the computer. Then download `GateControl.bonsai` and the `Extensions` folder next to it from the [docs/workflows](https://github.com/SainsburyWellcomeCentre/aeon_vertigate/tree/main/docs/workflows) folder of the repository, keep them together, and open `GateControl.bonsai` in Bonsai.
 

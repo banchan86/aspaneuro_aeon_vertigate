@@ -9,7 +9,7 @@
   href: connections.md
 - name: Installation
   href: installation.md
-- name: Gate Control Panel
+- name: GUI
   href: gate-control-panel.md
 - name: Bonsai
   href: harp-bonsai.md

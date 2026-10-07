@@ -18,12 +18,9 @@ The VertiGate provides:
 
 The VertiGate is designed and built by the [Sainsbury Wellcome Centre FabLabs](https://www.sainsburywellcome.org/content/fablab) for the [Aeon](https://aeon.swc.ucl.ac.uk/) project. Firmware, interfaces and documentation are in the [VertiGate](https://github.com/SainsburyWellcomeCentre/aeon_vertigate) repository.
 
-> [!WARNING]
-> **TODO**: Confirm how a lab outside the SWC can obtain a VertiGate, and add a link to the hardware design files once they are published.
-
 ## Acknowledgments
 
-Hardware, firmware and Bonsai interface by the [Sainsbury Wellcome Centre FabLabs](https://www.sainsburywellcome.org/content/fablab).
+Hardware and firmware by the [Sainsbury Wellcome Centre FabLabs](https://www.sainsburywellcome.org/content/fablab).
 
 > [!WARNING]
 > **TODO**: Confirm the list of contributors to acknowledge.
